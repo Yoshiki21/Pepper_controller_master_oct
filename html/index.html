@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>QiMessaging (メモリを監視)</title>
+    <script src="/libs/qimessaging/1.0/qimessaging.js"></script>
+    <script>
+      var session = new QiSession();
+      const unaduki = ["っんんっっんん","っっんん","っっんんっんん","へーーーー！！","ほーーーー！！","なるほどー","そうなんですね"]
+      function toTabletHandler(value) {
+        var value = value.replace(/どういうふー/g,'どういうふう');
+        var value = value.replace(/やろーと/g,'やろう');
+        var value = value.replace(/っ？/g,'');
+        var value = value.replace(/、/g,'');
+        var value = value.replace(/　/g,'');
+        var value = value.replace(/ーっ！！/g,'');
+        var value = value.replace(/っー！！/g,'');
+        var value = value.replace(/ーっ！/g,'');
+        var value = value.replace(/っ！/g,'');
+        var value = value.replace(/ぁ！！/g,'');
+        console.log("PepperQiMessaging/totabletイベント発生: " + value);
+        if (unaduki.indexOf(value) !==-1){
+          document.getElementById("memory").innerHTML = "";
+        }else{
+          document.getElementById("memory").innerHTML = value;
+        }
+        
+      }
+
+      function startSubscribe() {
+        session.service("ALMemory").done(function (ALMemory) {
+          console.log("ALMemory取得成功");
+          ALMemory.subscriber("ALTextToSpeech/CurrentSentence").done(function(subscriber) {
+            subscriber.signal.connect(toTabletHandler);
+          });
+        });
+      }
+    </script>
+    <link href="main.css" rel="stylesheet">
+  </head>
+  <body onLoad="startSubscribe();">
+    <div style="font-size: 12em;text-align: left;">
+      <!-- <div style="margin:75px;"> -->
+      <div class="wrapper">
+        <p id="memory"></p>
+      </div>
+    </div>
+  </body>
+</html>
