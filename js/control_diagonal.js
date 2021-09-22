@@ -376,14 +376,14 @@ function start_set(){
 	self.alMotion.wakeUp();
 }
 function positive_posture(){
-	self.alBehavior.runBehavior("yoshiki_master/listening_style_diagonal");
-	self.alBehavior.stopBehavior("yoshiki_master/show");
-	self.alBehavior.runBehavior("yoshiki_master/show");
+	self.alBehavior.runBehavior("yoshiki_master_oct/lean_sit");
+	// self.alBehavior.stopBehavior("yoshiki_master/show");
+	// self.alBehavior.runBehavior("yoshiki_master/show");
 }
 function np_positive_posture(){
-	self.alBehavior.runBehavior("yoshiki_master/Stand_diagonal");
-	self.alBehavior.stopBehavior("yoshiki_master/show");
-	self.alBehavior.runBehavior("yoshiki_master/show");
+	self.alBehavior.runBehavior("yoshiki_master_oct/sit_down");
+	// self.alBehavior.stopBehavior("yoshiki_master/show");
+	// self.alBehavior.runBehavior("yoshiki_master/show");
 }
 function toTabletHandler(value) {
         console.log("PepperQiMessaging/Recoイベント発生: " + value);
