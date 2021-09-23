@@ -170,141 +170,110 @@ function eye_track(num){
 			self.alBehavior.stopAllBehaviors();
 			break;
 		case 1:
-			self.alBehavior.runBehavior("yoshiki_master/eye_contact");
+			self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/03_eye_contact");
 			break;		
 	}
 }
-// monitorもいらない気がする
-function monitor(){
-	self.alBehavior.runBehavior("yoshiki_master/show");
-}
+
 function aiduchi(num){
+	self.alAudioDevice.setOutputVolume(50);
 	switch (num){
 		case 0:
-			self.alBehavior.stopAllBehaviors();
-			break;
-		case 1:
-			self.alBehavior.runBehavior("yoshiki_master/hoo_diagonal");
-			break;	
-		case 2:
-			self.alBehavior.runBehavior("yoshiki_master/hee_daigonal");
-			break;	
-		case 3:
-			self.alBehavior.runBehavior("yoshiki_master/naruhodo_diagonal");
-			break;	
-		case 4:
-			self.alBehavior.runBehavior("yoshiki_master/unun_diagonal");
-			break;	
-		case 5:
-			self.alBehavior.runBehavior("yoshiki_master/sounanndesune_diagonal");
-			break;	
-		case 6:
 			if (Math.random()>0.5){
-				self.alBehavior.runBehavior("yoshiki_master/nodding_diagonal")
+				self.alBehavior.runBehavior("yoshiki_master_oct/02_motion/00_nodding_diagonal")
 			}else{
-				self.alAudioDevice.setOutputVolume(30);
-				self.alBehavior.runBehavior("yoshiki_master/un_diagonal")
+				self.alAudioDevice.setOutputVolume(40);
+				self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi/00_un")
 			};
 			break;
-		case 7:
-			self.alBehavior.runBehavior("yoshiki_master/unun2_diagonal");
+		case 1:
+			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi/01_naruhodo");
 			break;	
+		case 2:
+			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi/02_sounandesune");
+			break;	
+		case 3:
+			self.alBehavior.runBehavior("yoshiki_master_oct//01_aiduchi/03_naruhodo_sounandesune");
+			break;	
+		case 4:
+			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi/04_a_naruhodo");
+			break;
+		case 5:
+			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi/05_arigatogozaimasu");
+			break;
+		case 6:
+			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi/06_a_hai");
+			break;
+		case 7:
+			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi/07_soudesune");
+			break;
 		case 8:
-			self.alBehavior.runBehavior("yoshiki_master/naruhodo_diagonal2");
-			break;
-		case 9:
-			self.alBehavior.runBehavior("yoshiki_master/mousukoshi");
-			break;
-		case 10:
-			self.alBehavior.runBehavior("yoshiki_master/naruhodo_mousukoshi_diagonal");
+			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi/08_zyaa");
 			break;
 	}
 }
 function aiduchi_np(num){
+	self.alAudioDevice.setOutputVolume(50);
 	switch (num){
 		case 0:
-			self.alBehavior.stopAllBehaviors();
+			self.alBehavior.runBehavior("yoshiki_master_oct/02_motion/00_nodding_diagonal")
 			break;
 		case 1:
-			self.alBehavior.runBehavior("yoshiki_master/hoo_neutral");
+			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi_np/01_naruhodo");
 			break;	
 		case 2:
-			self.alBehavior.runBehavior("yoshiki_master/hee_neutral");
+			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi_np/02_sounandesune");
 			break;	
 		case 3:
-			self.alBehavior.runBehavior("yoshiki_master/naruhodo_neutral");
+			self.alBehavior.runBehavior("yoshiki_master_oct//01_aiduchi_np/03_naruhodo_sounandesune");
 			break;	
 		case 4:
-			self.alBehavior.runBehavior("yoshiki_master/unun_neutral");
-			break;	
+			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi_np/04_a_naruhodo");
+			break;
 		case 5:
-			self.alBehavior.runBehavior("yoshiki_master/sounanndesune_neutral");
-			break;	
+			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi_np/05_arigatogozaimasu");
+			break;
 		case 6:
-			self.alBehavior.runBehavior("yoshiki_master/un_neutral");
+			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi_np/06_a_hai");
 			break;
 		case 7:
-			self.alBehavior.runBehavior("yoshiki_master/unun2_neutral");
-			break;		
+			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi_np/07_soudesune");
+			break;
+		case 8:
+			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi_np/08_zyaa");
+			break;
 	}
 }
 function posture(num){
 	switch (num){
+		case 0:
+			self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/00_sit_down")
+			break;
 		case 1:
-			self.alBehavior.runBehavior("yoshiki_master/Stand_diagonal");
+			self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/01_lean_sit");
 			break;	
-		case 2:
-			self.alBehavior.runBehavior("yoshiki_master/listening_style_diagonal");
-			break;	
-		case 3:
-			self.alBehavior.runBehavior("yoshiki_master/adoptive");
-			break;
-		case 4:
-			self.alBehavior.runBehavior("yoshiki_master/nodding_diagonal");
-			break;
-		case 5:
-			self.alBehavior.runBehavior("yoshiki_master/nodding_double_diagonal");
-			break;
-		case 6:
-			self.alBehavior.runBehavior("yoshiki_master/nodding_fast");
-			break;
-		case 7:
-			self.alBehavior.runBehavior("yoshiki_master/nodding_double_fast_diagonal");
-			break;
-		case 9:
-			self.alBehavior.runBehavior("yoshiki_master/nodding_double2_diagonal");
-			break;
-		// なるほど姿勢から戻る
-		case 10:
-			self.alBehavior.runBehavior("yoshiki_master/start_talking_diagonal2");
-			break;
 	}
 }
 function question(phrase){
 	// 手を動かして話始める
-	self.alBehavior.runBehavior("yoshiki_master/back_voice");
-	self.alAnimatedSpeech.say("^mode(disabled)^start(yoshiki_master/start_talking_diagonal)"+phrase);
+	self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/02_back_voice");
+	self.alBehavior.runBehavior("yoshiki_master_oct/02_motion/01_start_talking_diagonal");
+	self.alTextToSpeech.say(phrase);
 }
 function question_np(phrase){
 	// 手を動かさず話し始める
-	self.alBehavior.runBehavior("yoshiki_master/back_voice");
+	self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/02_back_voice");
 	self.alTextToSpeech.say(phrase);
-}
-function utterance_np(phrase){
-	self.alBehavior.runBehavior("yoshiki_master/back_voice");
-	self.alAnimatedSpeech.say("^mode(disabled)^start(yoshiki_master/start_talking2)"+phrase);
 }
 
 function utterance_spe(phrase){
-	// 移り変わる時の特殊な発話
-	self.alBehavior.runBehavior("yoshiki_master/back_voice");
-	self.alAnimatedSpeech.say("^mode(disabled)^start(yoshiki_master/listening_style_nod_diagonal)"+phrase);
+	self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/04_lean_sit_neck");
+	self.alTextToSpeech.say(phrase);
 }
 
 function utterance_spe2(phrase){
-	// 移り変わる時の特殊な発話2
-	self.alBehavior.runBehavior("yoshiki_master/back_voice");
-	self.alAnimatedSpeech.say("^mode(disabled)^start(yoshiki_master/start_talking2)"+phrase);
+	self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/01_lean_sit");
+	self.alTextToSpeech.say(phrase);
 }
 
 function trackmode(bl){
@@ -373,16 +342,7 @@ function start_set(){
 	sleep(10000)
 	self.alMotion.wakeUp();
 }
-function positive_posture(){
-	self.alBehavior.runBehavior("yoshiki_master_oct/lean_sit");
-	// self.alBehavior.stopBehavior("yoshiki_master/show");
-	// self.alBehavior.runBehavior("yoshiki_master/show");
-}
-function np_positive_posture(){
-	self.alBehavior.runBehavior("yoshiki_master_oct/sit_down");
-	// self.alBehavior.stopBehavior("yoshiki_master/show");
-	// self.alBehavior.runBehavior("yoshiki_master/show");
-}
+
 function toTabletHandler(value) {
         console.log("PepperQiMessaging/Recoイベント発生: " + value);
         $(".memory").text(value);
