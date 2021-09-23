@@ -114,6 +114,7 @@ function say(){
 	this.alTextToSpeech.say(value);
 }
 
+// 名前を呼ぶ関数
 function say_name(){
 	console.log("say_name");
 	var value = $("#name_input").val();
@@ -173,6 +174,7 @@ function eye_track(num){
 			break;		
 	}
 }
+// monitorもいらない気がする
 function monitor(){
 	self.alBehavior.runBehavior("yoshiki_master/show");
 }
@@ -248,6 +250,7 @@ function aiduchi_np(num){
 }
 function posture(num){
 	switch (num){
+		//設定はいらなそう
 		case 0:
 			self.alBehavior.stopBehavior("boot-config");
 			break;
@@ -272,22 +275,26 @@ function posture(num){
 		case 7:
 			self.alBehavior.runBehavior("yoshiki_master/nodding_double_fast_diagonal");
 			break;
+		// 設定はいらないそう
 		case 8:
 			self.alBehavior.runBehavior("boot-config");
 			break;
 		case 9:
 			self.alBehavior.runBehavior("yoshiki_master/nodding_double2_diagonal");
 			break;
+		// なるほど姿勢から戻る
 		case 10:
 			self.alBehavior.runBehavior("yoshiki_master/start_talking_diagonal2");
 			break;
 	}
 }
 function question(phrase){
+	// 手を動かして話始める
 	self.alBehavior.runBehavior("yoshiki_master/back_voice");
 	self.alAnimatedSpeech.say("^mode(disabled)^start(yoshiki_master/start_talking_diagonal)"+phrase);
 }
 function question_np(phrase){
+	// 手を動かさず話し始める
 	self.alBehavior.runBehavior("yoshiki_master/back_voice");
 	self.alTextToSpeech.say(phrase);
 }
@@ -297,11 +304,13 @@ function utterance_np(phrase){
 }
 
 function utterance_spe(phrase){
+	// 移り変わる時の特殊な発話
 	self.alBehavior.runBehavior("yoshiki_master/back_voice");
 	self.alAnimatedSpeech.say("^mode(disabled)^start(yoshiki_master/listening_style_nod_diagonal)"+phrase);
 }
 
 function utterance_spe2(phrase){
+	// 移り変わる時の特殊な発話2
 	self.alBehavior.runBehavior("yoshiki_master/back_voice");
 	self.alAnimatedSpeech.say("^mode(disabled)^start(yoshiki_master/start_talking2)"+phrase);
 }
@@ -367,6 +376,7 @@ function qimessagingCurrentSentenceSubscribe(){
 }
 
 function start_set(){
+	//設定をOFFにする動作はNAOにはいらない気がする
 	self.alBehavior.stopBehavior("boot-config");
 	sleep(10000)
 	console.log("OFF");
