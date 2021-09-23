@@ -250,10 +250,6 @@ function aiduchi_np(num){
 }
 function posture(num){
 	switch (num){
-		//設定はいらなそう
-		case 0:
-			self.alBehavior.stopBehavior("boot-config");
-			break;
 		case 1:
 			self.alBehavior.runBehavior("yoshiki_master/Stand_diagonal");
 			break;	
@@ -274,10 +270,6 @@ function posture(num){
 			break;
 		case 7:
 			self.alBehavior.runBehavior("yoshiki_master/nodding_double_fast_diagonal");
-			break;
-		// 設定はいらないそう
-		case 8:
-			self.alBehavior.runBehavior("boot-config");
 			break;
 		case 9:
 			self.alBehavior.runBehavior("yoshiki_master/nodding_double2_diagonal");
@@ -376,10 +368,6 @@ function qimessagingCurrentSentenceSubscribe(){
 }
 
 function start_set(){
-	//設定をOFFにする動作はNAOにはいらない気がする
-	self.alBehavior.stopBehavior("boot-config");
-	sleep(10000)
-	console.log("OFF");
 	self.alAutonomousLife.getState().done(function(val){console.log(val)});
 	self.alAutonomousLife.setState("disabled");
 	sleep(10000)
