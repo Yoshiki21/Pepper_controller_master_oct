@@ -119,205 +119,226 @@
 	</div>
 	<h3>基本操作</h3>
 	<div class = "row">
-		<div class="col-xs-6"><button onclick="start_set()" class="btn btn-default">初期動作</button></div>
-		<div class="col-xs-6"><button onclick="eye_track(0)" class="btn btn-danger">ストップ</button></div>
-		<div class="col-xs-6"><button onclick="eye_track(1)" class="btn btn-default">アイトラック</button></div>
-		<div class="col-xs-6"><button onclick="posture(0)" class="btn btn-info">初期姿勢</button></div>
-		<div class="col-xs-6"><button onclick="posture(1)" class="btn btn-success">聞く体勢</button></div>
+		<div class="col-xs-2"><button onclick="start_set()" class="btn btn-default">初期動作</button></div>
+		<div class="col-xs-2"><button onclick="eye_track(0)" class="btn btn-danger">ストップ</button></div>
+		<div class="col-xs-2"><button onclick="eye_track(1)" class="btn btn-default">アイトラック</button></div>
+		<div class="col-xs-2"><button onclick="posture(0)" class="btn btn-primary">初期姿勢</button></div>
+		<div class="col-xs-2"><button onclick="posture(1)" class="btn btn-warning">聞く体勢</button></div>
 	</div>
 	<details >
-		<summary>日常経験質問　ポジティブ条件</summary>
+		<summary><b>日常経験質問　ポジティブ条件</b></summary>
 		<div class = "row">
-			<div class="col-xs-6"><button onclick="say_name()" class="btn btn-default">名前</button></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="こんにちは！僕の名前はナオです。"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-success" value="今日はいろいろ、お話しを伺いたいと思います。よろしくお願いします"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-success" value="まずお名前を、教えていただけますか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="ぼくは、世界中の人が、覚えやすくて、発音しやすいように"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="ナオと名づけられたんだっ！"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-success" value="お名前の由来は、何かありますか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="ぼくの住む、大岡山へようこそ！"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-success" value="今日はどこから、いらっしゃったんですか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="ぼくは、今は、大岡山にいるけど"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="フランスの、パリの研究者によって、設計されたんだぁ！！"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-success" value="生まれ育った場所は、どちらなんですか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="ぼくが、誕生したのは、2008年の4月3日なんだけど"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-success" value="お誕生日は、いつなんですか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="じゃあその日には、プレゼントを、あげないとねーっ！"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="ぼくが、もらって嬉しい、好きな食べ物は、電気なんだけど"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-success" value="お好きな食べ物は、何かありますか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="今度、ぼくの兄弟、ペッパーと一緒に食べにいこうよっ？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-success" value="ご兄弟や、ご家族について、教えてください！"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="ぼくの兄弟のペッパーは、昔ベイマックスというロボットの映画に出たんだ！"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="ぼくは、その映画が大好きなんだけど、"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-success" value="好きな映画は、ありますか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="ぼくは、映画を見る、以外の時間は、"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="皆さんともっと良くお話しするために、人間について、勉強しているんだけど"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-success" value="自由な時間は、何をして、過ごすことが多いですか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="ぼくは、最近、こうやって皆さんの、お話しを聞くことが、すごく楽しいんだっー！！"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-success" value="最近あった、楽しかったことを、教えてください！"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="10分経ったので一度、休憩しませんか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="いろいろ、おきかせいただき、ありがとうございました。"></div>
+			<div class="col-xs-12"><button onclick="say_name()" class="btn btn-default">名前</button></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="こんにちは！僕の名前はナオです。"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-warning" value="今日はいろいろ、お話しを伺いたいと思います。よろしくお願いします"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-warning" value="まずお名前を、教えていただけますか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="ぼくは、世界中の人が、覚えやすくて、発音しやすいように"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="ナオと名づけられたんだっ！"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-warning" value="お名前の由来は、何かありますか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="ぼくの住む、大岡山へようこそ！"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-warning" value="今日はどこから、いらっしゃったんですか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="ぼくは、今は、大岡山にいるけど"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="フランスの、パリの研究者によって、設計されたんだぁ！！"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-warning" value="生まれ育った場所は、どちらなんですか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="ぼくが、誕生したのは、2008年の4月3日なんだけど"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-warning" value="お誕生日は、いつなんですか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="じゃあその日には、プレゼントを、あげないとねーっ！"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="ぼくが、もらって嬉しい、好きな食べ物は、電気なんだけど"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-warning" value="お好きな食べ物は、何かありますか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="今度、ぼくの兄弟、ペッパーと一緒に食べにいこうよっ？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-warning" value="ご兄弟や、ご家族について、教えてください！"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="ぼくの兄弟のペッパーは、昔ベイマックスというロボットの映画に出たんだ！"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="ぼくは、その映画が大好きなんだけど、"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-warning" value="好きな映画は、ありますか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="ぼくは、映画を見る、以外の時間は、"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="皆さんともっと良くお話しするために、人間について、勉強しているんだけど"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-warning" value="自由な時間は、何をして、過ごすことが多いですか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="ぼくは、最近、こうやって皆さんの、お話しを聞くことが、すごく楽しいんだっー！！"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-warning" value="最近あった、楽しかったことを、教えてください！"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="10分経ったので一度、休憩しませんか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="いろいろ、おきかせいただき、ありがとうございました。"></div>
 		</div>
 	</details>
 	<details >
-		<summary>日常経験質問 非ポジティブ条件</summary>
+		<summary><b>日常経験質問 非ポジティブ条件</b></summary>
 		<div class = "row">
-			<div class="col-xs-6"><button onclick="say_name()" class="btn btn-default">名前</button></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="こんにちは！僕の名前はナオです。"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="今日はいろいろ、お話しを伺いたいと思います。よろしくお願いします"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="まずお名前を、教えていただけますか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="ぼくは、世界中の人が、覚えやすくて、発音しやすいように"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="ナオと名づけられたんだっ！"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="お名前の由来は、何かありますか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="ぼくの住む、大岡山へようこそ！"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="今日はどこから、いらっしゃったんですか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="ぼくは、今は、大岡山にいるけど"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="フランスの、パリの研究者によって、設計されたんだぁ！！"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="生まれ育った場所は、どちらなんですか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="ぼくが、誕生したのは、2008年の4月3日なんだけど"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="お誕生日は、いつなんですか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="じゃあその日には、プレゼントを、あげないとねーっ！"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="ぼくが、もらって嬉しい、好きな食べ物は、電気なんだけど"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="お好きな食べ物は、何かありますか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="今度、ぼくの兄弟、ペッパーと一緒に食べにいこうよっ？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="ご兄弟や、ご家族について、教えてください！"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="ぼくの兄弟のペッパーは、昔ベイマックスというロボットの映画に出たんだ！"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="ぼくは、その映画が大好きなんだけど、"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="好きな映画は、ありますか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="ぼくは、映画を見る、以外の時間は、"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="皆さんともっと良くお話しするために、人間について、勉強しているんだけど"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="自由な時間は、何をして、過ごすことが多いですか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="ぼくは、最近、こうやって皆さんの、お話しを聞くことが、すごく楽しいんだっー！！"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="最近あった、楽しかったことを、教えてください！"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="10分経ったので一度、休憩しませんか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="いろいろ、おきかせいただき、ありがとうございました。"></div>
+			<div class="col-xs-12"><button onclick="say_name()" class="btn btn-default">名前</button></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="こんにちは！僕の名前はナオです。"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="今日はいろいろ、お話しを伺いたいと思います。よろしくお願いします"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="まずお名前を、教えていただけますか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="ぼくは、世界中の人が、覚えやすくて、発音しやすいように"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="ナオと名づけられたんだっ！"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="お名前の由来は、何かありますか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="ぼくの住む、大岡山へようこそ！"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="今日はどこから、いらっしゃったんですか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="ぼくは、今は、大岡山にいるけど"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="フランスの、パリの研究者によって、設計されたんだぁ！！"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="生まれ育った場所は、どちらなんですか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="ぼくが、誕生したのは、2008年の4月3日なんだけど"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="お誕生日は、いつなんですか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="じゃあその日には、プレゼントを、あげないとねーっ！"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="ぼくが、もらって嬉しい、好きな食べ物は、電気なんだけど"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="お好きな食べ物は、何かありますか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="今度、ぼくの兄弟、ペッパーと一緒に食べにいこうよっ？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="ご兄弟や、ご家族について、教えてください！"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="ぼくの兄弟のペッパーは、昔ベイマックスというロボットの映画に出たんだ！"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="ぼくは、その映画が大好きなんだけど、"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="好きな映画は、ありますか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="ぼくは、映画を見る、以外の時間は、"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="皆さんともっと良くお話しするために、人間について、勉強しているんだけど"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="自由な時間は、何をして、過ごすことが多いですか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="ぼくは、最近、こうやって皆さんの、お話しを聞くことが、すごく楽しいんだっー！！"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="最近あった、楽しかったことを、教えてください！"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="10分経ったので一度、休憩しませんか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="いろいろ、おきかせいただき、ありがとうございました。"></div>
 		</div>
 	</details>
 	<details>
-		<summary>あいづち　ポジティブ条件</summary>
+		<summary><b>あいづち　ポジティブ条件</b></summary>
 		<div class = "row">
-			<div class="col-xs-6"><button onclick="aiduchi(0)" class="btn btn-success">うん</button></div>
-			<div class="col-xs-6"><button onclick="aiduchi(1)" class="btn btn-success">なるほど</button></div>
-			<div class="col-xs-6"><button onclick="aiduchi(2)" class="btn btn-success">そうなんですね</button></div>
-			<div class="col-xs-6"><button onclick="aiduchi(3)" class="btn btn-success">なるほど、そうなんですね</button></div>
-			<div class="col-xs-6"><button onclick="aiduchi(4)" class="btn btn-success">あー、なるほど</button></div>
-			<div class="col-xs-6"><button onclick="aiduchi(5)" class="btn btn-success">ありがとうございます</button></div>
-			<div class="col-xs-6"><button onclick="aiduchi(6)" class="btn btn-success">あー、はい</button></div>
-			<div class="col-xs-6"><button onclick="aiduchi(7)" class="btn btn-success">そうですね</button></div>
-			<div class="col-xs-6"><button onclick="aiduchi(8)" class="btn btn-success">じゃあ、</button></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="それは腹が立ちましたね"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="それは嫌な気分になりましたね"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="それは怖かったですね"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="それは、嬉しかったですね！！"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="それは、悲しかったですね"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="それは、驚きましたね"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="すみません、ぼくにとってはかなり難しい質問です。"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="ぼくは、あなたのことをもっと、知りたいと思っています！"></div>
+			<div class="col-xs-12"><button onclick="aiduchi(0)" class="btn btn-warning">うん</button></div>
+			<div class="col-xs-12"><p>返答リスト</p></div>
+			<div class="col-xs-3"><button onclick="aiduchi(1)" class="btn btn-warning">なるほど</button></div>
+			<div class="col-xs-3"><button onclick="aiduchi(2)" class="btn btn-warning">そうなんですね</button></div>
+			<div class="col-xs-3"><button onclick="aiduchi(3)" class="btn btn-warning">なるほど、そうなんですね</button></div>
+			<div class="col-xs-3"><button onclick="aiduchi(4)" class="btn btn-warning">あー、なるほど</button></div>
+			<div class="col-xs-3"><button onclick="aiduchi(5)" class="btn btn-warning">ありがとうございます</button></div>
+			<div class="col-xs-3"><button onclick="aiduchi(6)" class="btn btn-warning">あー、はい</button></div>
+			<div class="col-xs-3"><button onclick="aiduchi(7)" class="btn btn-warning">そうですね</button></div>
+			<div class="col-xs-3"><button onclick="aiduchi(8)" class="btn btn-warning">じゃあ、</button></div>
+			<div class="col-xs-12"><p>感情的な返答</p></div>
+			<div class="col-xs-4"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="それは腹が立ちましたね"></div>
+			<div class="col-xs-4"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="それは嫌な気分になりましたね"></div>
+			<div class="col-xs-4"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="それは怖かったですね"></div>
+			<div class="col-xs-4"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="それは、嬉しかったですね！！"></div>
+			<div class="col-xs-4"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="それは、悲しかったですね"></div>
+			<div class="col-xs-4"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="それは、驚きましたね"></div>
+			<div class="col-xs-12"><p>困った時の返答</p></div>
+			<div class="col-xs-4"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="すみません、ぼくにとってはかなり難しい質問です。"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="ぼくは、あなたのことをもっと、知りたいと思っています！"></div>
 		</div>
 	</details>
 	<details>
-		<summary>あいづち　非ポジティブ条件</summary>
+		<summary><b>あいづち　非ポジティブ条件</b></summary>
 		<div class = "row">
-			<div class="col-xs-6"><button onclick="aiduchi_np(0)" class="btn btn-success">うん</button></div>
-			<div class="col-xs-6"><button onclick="aiduchi_np(1)" class="btn btn-success">なるほど</button></div>
-			<div class="col-xs-6"><button onclick="aiduchi_np(2)" class="btn btn-success">そうなんですね</button></div>
-			<div class="col-xs-6"><button onclick="aiduchi_np(3)" class="btn btn-success">なるほど、そうなんですね</button></div>
-			<div class="col-xs-6"><button onclick="aiduchi_np(4)" class="btn btn-success">あー、なるほど</button></div>
-			<div class="col-xs-6"><button onclick="aiduchi_np(5)" class="btn btn-success">ありがとうございます</button></div>
-			<div class="col-xs-6"><button onclick="aiduchi_np(6)" class="btn btn-success">あー、はい</button></div>
-			<div class="col-xs-6"><button onclick="aiduchi_np(7)" class="btn btn-success">そうですね</button></div>
-			<div class="col-xs-6"><button onclick="aiduchi_np(8)" class="btn btn-success">じゃあ、</button></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="すみません、ぼくにとってはかなり難しい質問です。"></div>
-			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="ぼくは、あなたのことをもっと、知りたいと思っています！"></div>
+			<div class="col-xs-12"><button onclick="aiduchi_np(0)" class="btn btn-primary">うん</button></div>
+			<div class="col-xs-12"><p>返答リスト</p></div>
+			<div class="col-xs-3"><button onclick="aiduchi_np(1)" class="btn btn-primary">なるほど</button></div>
+			<div class="col-xs-3"><button onclick="aiduchi_np(2)" class="btn btn-primary">そうなんですね</button></div>
+			<div class="col-xs-3"><button onclick="aiduchi_np(3)" class="btn btn-primary">なるほど、そうなんですね</button></div>
+			<div class="col-xs-3"><button onclick="aiduchi_np(4)" class="btn btn-primary">あー、なるほど</button></div>
+			<div class="col-xs-3"><button onclick="aiduchi_np(5)" class="btn btn-primary">ありがとうございます</button></div>
+			<div class="col-xs-3"><button onclick="aiduchi_np(6)" class="btn btn-primary">あー、はい</button></div>
+			<div class="col-xs-3"><button onclick="aiduchi_np(7)" class="btn btn-primary">そうですね</button></div>
+			<div class="col-xs-3"><button onclick="aiduchi_np(8)" class="btn btn-primary">じゃあ、</button></div>
+			<div class="col-xs-12"><p>困った時の返答</p></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="すみません、ぼくにとってはかなり難しい質問です。"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="ぼくは、あなたのことをもっと、知りたいと思っています！"></div>
 		</div>
 	</details>
 	<details >
-		<summary>掘り下げ質問 ポジティブ条件</summary>
+		<summary><b>掘り下げ質問 ポジティブ条件</b></summary>
 		<div class = "row">
-			<p>その他質問</p>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="その話っ！もっと詳しく聞かせてください"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="それって、どんなものですか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="それは、どこですか？"></div>
+			<div class="col-xs-12"><p>その他質問</p></div>
+			<div class="col-xs-4"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="その話っ！もっと詳しく聞かせてください"></div>
+			<div class="col-xs-4"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="それって、どんなものですか？"></div>
+			<div class="col-xs-4"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="それは、どこですか？"></div>
 		</div>
 		<div class = "row">
-			<p>過去の経験についての質問</p>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="どういうふーに、それを頑張ったんですか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="それをやろーとした、きっかけはあったんですか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="それを通して、何か問題や、トラブルは起こりませんでしたか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="それをどう解決していったのですか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="今回、その経験を思い出してみて、何か新たに、気づいたことはありましたか？"></div>
+			<div class="col-xs-12"><p>過去の経験についての質問</p></div>
+			<div class="col-xs-12"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="どういうふーに、それを頑張ったんですか？"></div>
+			<div class="col-xs-12"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="それをやろーとした、きっかけはあったんですか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="それを通して、何か問題や、トラブルは起こりませんでしたか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="それをどう解決していったのですか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="今回、その経験を思い出してみて、何か新たに、気づいたことはありましたか？"></div>
 		</div>
 		<div class = "row">
-			<p>過去の気持ちについての質問</p>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="そのとき、どう思いましたか？"></div>
+			<div class="col-xs-12"><p>過去の気持ちについての質問</p></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="そのとき、どう思いましたか？"></div>
 		</div>
 		<div class = "row">
-			<p>現在の高齢者ご自身についての質問</p>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="それを始める、まえとあとで、ご自身の中で、何か変わったことはありましたか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="その経験が今も活きていると思いますか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="どう、活きていると思いますか？"></div>
-			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="今回、その経験を思い出してみて、どんな風に感じましたか？"></div>
+			<div class="col-xs-12"><p>現在の高齢者ご自身についての質問</p></div>
+			<div class="col-xs-12"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="それを始める、まえとあとで、ご自身の中で、何か変わったことはありましたか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="その経験が今も活きていると思いますか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="どう、活きていると思いますか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="今回、その経験を思い出してみて、どんな風に感じましたか？"></div>
 		</div>
 	</details>
 	<details >
-		<summary>掘り下げ質問 非ポジティブ条件</summary>
+		<summary><b>掘り下げ質問 非ポジティブ条件</b></summary>
 		<div class = "row">
-			<div class = "row">
-				<p>その他質問</p>
-				<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="その話っ！もっと詳しく聞かせてください"></div>
-				<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="それって、どんなものですか？"></div>
-				<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="それは、どこですか？"></div>
-			</div>
-			<div class = "row">
-				<p>過去の経験についての質問</p>
-				<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="どういうふーに、それを頑張ったんですか？"></div>
-				<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="それをやろーとした、きっかけはあったんですか？"></div>
-				<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="それを通して、何か問題や、トラブルは起こりませんでしたか？"></div>
-				<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="それをどう解決していったのですか？"></div>
-				<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="今回、その経験を思い出してみて、何か新たに、気づいたことはありましたか？"></div>
-			</div>
-			<div class = "row">
-				<p>過去の気持ちについての質問</p>
-				<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="そのとき、どう思いましたか？"></div>
-			</div>
-			<div class = "row">
-				<p>現在の高齢者ご自身についての質問</p>
-				<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="それを始める、まえとあとで、ご自身の中で、何か変わったことはありましたか？"></div>
-				<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="その経験が今も活きていると思いますか？"></div>
-				<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="どう、活きていると思いますか？"></div>
-				<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-info" value="今回、その経験を思い出してみて、どんな風に感じましたか？"></div>
-			</div>
+			<div class="col-xs-12"><p>その他質問</p></div>
+			<div class="col-xs-4"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="その話っ！もっと詳しく聞かせてください"></div>
+			<div class="col-xs-4"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="それって、どんなものですか？"></div>
+			<div class="col-xs-4"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="それは、どこですか？"></div>
+		</div>
+		<div class = "row">
+			<div class="col-xs-12"><p>過去の経験についての質問</p></div>
+			<div class="col-xs-12"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="どういうふーに、それを頑張ったんですか？"></div>
+			<div class="col-xs-12"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="それをやろーとした、きっかけはあったんですか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="それを通して、何か問題や、トラブルは起こりませんでしたか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="それをどう解決していったのですか？"></div>
+			<div class="col-xs-12"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="今回、その経験を思い出してみて、何か新たに、気づいたことはありましたか？"></div>
+		</div>
+		<div class = "row">
+			<div class="col-xs-12"><p>過去の気持ちについての質問</p></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="そのとき、どう思いましたか？"></div>
+		</div>
+		<div class = "row">
+			<div class="col-xs-12"><p>現在の高齢者ご自身についての質問</p></div>
+			<div class="col-xs-12"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="それを始める、まえとあとで、ご自身の中で、何か変わったことはありましたか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="その経験が今も活きていると思いますか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="どう、活きていると思いますか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="今回、その経験を思い出してみて、どんな風に感じましたか？"></div>
 		</div>
 	</details>
 	<h3>統合的人生経験質問</h3>
-    <div class = "row">
-		<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="改めまして、よろしくお願いします。"></div>
-		<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-success" value="これまでの人生で、忘れられない経験について、お話しいただけますか？"></div>
-		<div class="col-xs-6"><input type="button" onclick="utterance_spe(this.value)" class="btn btn-info" value="改めまして、よろしくお願いします。"></div>
-		<div class="col-xs-6"><input type="button" onclick="utterance_spe2(this.value)" class="btn btn-info" value="これまでの人生で、忘れられない経験について、お話しいただけますか？"></div>
-		<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="改めまして、よろしくお願いします。"></div>
-		<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="これまでの人生で、忘れられない経験について、お話しいただけますか？"></div>
-        <div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-default" value="その経験から、\pau=400\人生で大切だと思ったことはありますか？"></div>
-		<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="その経験から、\pau=400\人生で大切だと思ったことはありますか？"></div>
-		<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="10分経ったので、終りにしましょう"></div>
-		<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-success" value="いろいろ、おきかせいただき、ありがとうございました。"></div>
-		<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="10分経ったので、終りにしましょう"></div>
-		<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="いろいろ、おきかせいただき、ありがとうございました。"></div>
+	<div class = "row">		
 		<div class="col-xs-6"><button onclick="say_name()" class="btn btn-default">名前</button></div>
 	</div>
+	<details>
+		<summary><b>CP水準</b></summary>
+		<div class = "row">
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="改めまして、よろしくお願いします。"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-warning" value="これまでの人生で、忘れられない経験について、お話しいただけますか？"></div>
+			<div class="col-xs-12"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="その経験から、\pau=400\人生で大切だと思ったことはありますか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="10分経ったので、終りにしましょう"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="いろいろ、おきかせいただき、ありがとうございました。"></div>
+		</div>
+	</details>
+	<details>
+		<summary><b>CN水準</b></summary>
+		<div class = "row">
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="改めまして、よろしくお願いします。"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="これまでの人生で、忘れられない経験について、お話しいただけますか？"></div>
+			<div class="col-xs-12"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="その経験から、\pau=400\人生で大切だと思ったことはありますか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="10分経ったので、終りにしましょう"></div>
+			<div class="col-xs-6"><input type="button" onclick="question_np(this.value)" class="btn btn-primary" value="いろいろ、おきかせいただき、ありがとうございました。"></div>
+		</div>
+	</details>
+	<details>
+		<summary><b>Ch水準</b></summary>
+		<div class = "row">
+			<div class="col-xs-6"><input type="button" onclick="utterance_spe(this.value)" class="btn btn-success" value="改めまして、よろしくお願いします。"></div>
+			<div class="col-xs-6"><input type="button" onclick="utterance_spe2(this.value)" class="btn btn-success" value="これまでの人生で、忘れられない経験について、お話しいただけますか？"></div>
+			<div class="col-xs-12"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="その経験から、\pau=400\人生で大切だと思ったことはありますか？"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="10分経ったので、終りにしましょう"></div>
+			<div class="col-xs-6"><input type="button" onclick="question(this.value)" class="btn btn-warning" value="いろいろ、おきかせいただき、ありがとうございました。"></div>
+		</div>
+	</details>
   <h3>ALMemory Event</h3>
 	<div class = "row">
-		<div class="col-xs-12" ><button onclick="qimessagingMemoryEvent()" class="btn btn-info">PepperQiMessaging/Hey</button></div>
+		<div class="col-xs-12" ><button onclick="qimessagingMemoryEvent()" class="btn btn-primary">PepperQiMessaging/Hey</button></div>
 		<div class="col-xs-12" >pepper : <span class="memory"></span></div>
 	</div>
 	<h3>オートノマスライフ</h3>
 	<div class = "row">
-		<div class="col-xs-6" ><button onclick="autonomousSwitch(true)" class="btn btn-info">autonomous/ON</button></div>
+		<div class="col-xs-6" ><button onclick="autonomousSwitch(true)" class="btn btn-primary">autonomous/ON</button></div>
 		<div class="col-xs-6" ><button onclick="autonomousSwitch(false)" class="btn btn-danger">autonomous/OFF</button></div>
 	</div>
 	<h3>Wake up/Sleep</h3>
 	<div class = "row">
-		<div class="col-xs-6" ><button onclick="sleepSwitch(true)" class="btn btn-info">Wake up</button></div>
+		<div class="col-xs-6" ><button onclick="sleepSwitch(true)" class="btn btn-primary">Wake up</button></div>
 		<div class="col-xs-6" ><button onclick="sleepSwitch(false)" class="btn btn-danger">Sleep</button></div>
 	</div>
 	<div class = "row">
