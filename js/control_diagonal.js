@@ -210,6 +210,18 @@ function aiduchi(num){
 		case 8:
 			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi/08_zyaa");
 			break;
+		case 9:
+			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi/09_a_ano");
+			break;
+		case 10:
+			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi/10_ha_arigatougozaimasu");
+			break;
+		case 11:
+			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi/11_naruhodo_mousukoshi");
+			break;
+		case 12:
+			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi/12_soudattandesune");
+			break;
 	}
 }
 function aiduchi_np(num){

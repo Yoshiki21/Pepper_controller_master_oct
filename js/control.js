@@ -200,7 +200,7 @@ function aiduchi(num){
 			break;
 		case 7:
 			self.alBehavior.runBehavior("yoshiki_master/unun2");
-			break;		
+			break;
 	}
 }
 function aiduchi_np(num){
