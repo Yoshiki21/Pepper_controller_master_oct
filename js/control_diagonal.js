@@ -317,12 +317,12 @@ function name_saying(num){
 	var value = $("#name_input").val();
 	switch(num){
 		case 1:
-			self.alTextToSpeech.say("そんな素敵な" +value+"さんだからこそ、こんな体験ができたんですね！");
+			self.alTextToSpeech.say("そんな素敵な" +value+"さんだからこそ、そんな体験ができたんですね！");
 			break;
-		case 1:
-			self.alTextToSpeech.say("謙虚で人に感謝を忘れないところが、" +value+"さんの良いところですね！");
+		case 2:
+			self.alTextToSpeech.say("謙虚で人に感謝を忘れないところが、" +value+"さんの良いところ、ですね！");
 			break;
-		case 1:
+		case 3:
 			self.alTextToSpeech.say("それでも頑張った" +value+"さんは素晴らしいと思います。");
 			break;
 	}
