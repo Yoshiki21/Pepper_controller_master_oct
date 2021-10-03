@@ -313,6 +313,21 @@ function autonomousSwitch(bl){
 	}
 }
 
+function name_saying(num){
+	var value = $("#name_input").val();
+	switch(num){
+		case 1:
+			self.alTextToSpeech.say("そんな素敵な" +value+"さんだからこそ、こんな体験ができたんですね！");
+			break;
+		case 1:
+			self.alTextToSpeech.say("謙虚で人に感謝を忘れないところが、" +value+"さんの良いところですね！");
+			break;
+		case 1:
+			self.alTextToSpeech.say("それでも頑張った" +value+"さんは素晴らしいと思います。");
+			break;
+	}
+}
+
 function sleepSwitch(bl){
 	var status;
 	if (bl)
