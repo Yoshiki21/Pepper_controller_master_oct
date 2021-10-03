@@ -5,11 +5,12 @@
     <title>QiMessaging (メモリを監視)</title>
     <script src="libs/qimessaging/1.0/qimessaging.js"></script>
     <script>
-      const unaduki = ["っんんっっんん","っっんん","っっんんっんん","へーーーー！！","ほーーーー！！","なるほどー","そうなんですね"]
+      const unaduki = ["っんんっっんん","っっんん","っっんんっんん","へーーーー！！","ほーーーー！！","なるほどー","そうなんですね！！","なるほどーーそうなんですねぇ","っぁーーー","はいー","そうですねぇぇ","じゃあ","っぁぁーーーー","あのぉー","っはぁーーーー","なるほどーー","もう少し質問しても良いですかー？","そーだったんーですねぇ---","っんー"]
       function toTabletHandler(value) {
         var value = value.replace(/どういうふー/g,'どういうふう');
         var value = value.replace(/やろーと/g,'やろう');
         var value = value.replace(/っ？/g,'');
+        var value = value.replace(/ろっで/g,'ろで');
         var value = value.replace(/、/g,'');
         var value = value.replace(/　/g,'');
         var value = value.replace(/ーっ！！/g,'');
@@ -21,6 +22,7 @@
           document.getElementById("memory").innerHTML = "";
         }else{
           document.getElementById("memory").innerHTML = value;
+          console.log(value)
         }
         
       }
@@ -38,7 +40,7 @@
     <link href="html/main.css" rel="stylesheet">
   </head>
   <body onLoad="startSubscribe();">
-    <div style="font-size: 12em;text-align: left;">
+    <div style="font-size: 10em;text-align: left;">
       <!-- <div style="margin:75px;"> -->
       <div class="wrapper">
         <p id="memory"></p>

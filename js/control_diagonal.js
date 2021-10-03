@@ -320,7 +320,7 @@ function name_saying(num){
 			self.alTextToSpeech.say("そんな素敵な" +value+"さんだからこそ、そんな体験ができたんですね！");
 			break;
 		case 2:
-			self.alTextToSpeech.say("謙虚で人に感謝を忘れないところが、" +value+"さんの良いところ、ですね！");
+			self.alTextToSpeech.say("謙虚で、人に感謝を忘れないところが、" +value+"さんの良いところっですね！");
 			break;
 		case 3:
 			self.alTextToSpeech.say("それでも頑張った" +value+"さんは素晴らしいと思います。");
