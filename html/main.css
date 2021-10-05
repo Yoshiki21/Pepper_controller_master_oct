@@ -1,8 +1,8 @@
 .wrapper {
     background: #d6ebff;
     padding: 0px 100px;
-    width: 2732px;
-    height: 2048px;
+    width: 1366;
+    height: 90vh;
     display: flex;
     justify-content: center; /*左右中央揃え*/
     align-items: center;     /*上下中央揃え*/
