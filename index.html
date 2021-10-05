@@ -28,7 +28,7 @@
       }
 
       function startSubscribe() {
-        var session = new QiSession("192.168.179.251");
+        var session = new QiSession("169.254.159.144");
         console.log(session)
         session.service("ALMemory").done(function (ALMemory) {
           ALMemory.subscriber("ALTextToSpeech/CurrentSentence").done(function(subscriber) {
@@ -40,7 +40,7 @@
     <link href="html/main.css" rel="stylesheet">
   </head>
   <body onLoad="startSubscribe();">
-    <div style="font-size: 10em;text-align: left;">
+    <div style="font-size: 5em;text-align: left;">
       <!-- <div style="margin:75px;"> -->
       <div class="wrapper">
         <p id="memory"></p>
