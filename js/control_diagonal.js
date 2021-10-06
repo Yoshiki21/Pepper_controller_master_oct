@@ -222,6 +222,9 @@ function aiduchi(num){
 		case 12:
 			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi/12_soudattandesune");
 			break;
+		case 13:
+			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi/13_mousukoshi");
+			break;
 	}
 }
 function aiduchi_np(num){
@@ -231,28 +234,28 @@ function aiduchi_np(num){
 			self.alBehavior.runBehavior("yoshiki_master_oct/02_motion/00_nodding_diagonal")
 			break;
 		case 1:
-			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi_np/01_naruhodo");
+			self.alBehavior.runBehavior("yoshiki_master_oct/03_aiduchi_np/01_naruhodo");
 			break;	
 		case 2:
-			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi_np/02_sounandesune");
+			self.alBehavior.runBehavior("yoshiki_master_oct/03_aiduchi_np/02_sounandesune");
 			break;	
 		case 3:
-			self.alBehavior.runBehavior("yoshiki_master_oct//01_aiduchi_np/03_naruhodo_sounandesune");
+			self.alBehavior.runBehavior("yoshiki_master_oct//03_aiduchi_np/03_naruhodo_sounandesune");
 			break;	
 		case 4:
-			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi_np/04_a_naruhodo");
+			self.alBehavior.runBehavior("yoshiki_master_oct/03_aiduchi_np/04_a_naruhodo");
 			break;
 		case 5:
-			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi_np/05_arigatogozaimasu");
+			self.alBehavior.runBehavior("yoshiki_master_oct/03_aiduchi_np/05_arigatogozaimasu");
 			break;
 		case 6:
-			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi_np/06_a_hai");
+			self.alBehavior.runBehavior("yoshiki_master_oct/03_aiduchi_np/06_a_hai");
 			break;
 		case 7:
-			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi_np/07_soudesune");
+			self.alBehavior.runBehavior("yoshiki_master_oct/03_aiduchi_np/07_soudesune");
 			break;
 		case 8:
-			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi_np/08_zyaa");
+			self.alBehavior.runBehavior("yoshiki_master_oct/03_aiduchi_np/08_zyaa");
 			break;
 	}
 }
