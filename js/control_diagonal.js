@@ -281,7 +281,7 @@ function question_np(phrase){
 function question_np_move(phrase){
 	// 手を動かさず話し始める
 	self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/02_back_voice");
-	self.alBehavior.runBehavior("yoshiki_master_oct/02_motion/01_start_talking_diagonal_neutral");
+	self.alBehavior.runBehavior("yoshiki_master_oct/02_motion/02_start_talking_diagonal_neutral");
 	self.alTextToSpeech.say(phrase);
 }
 

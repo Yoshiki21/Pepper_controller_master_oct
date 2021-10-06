@@ -1,13 +1,29 @@
 .wrapper {
-    background: #d6ebff;
+    /* background: #d6ebff; */
     padding: 0px 100px;
     width: 1366;
     height: 90vh;
     display: flex;
-    font-family: 'メイリオ', 'Meiryo', sans-serif;
-    justify-content: center; /*左右中央揃え*/
-    align-items: center;     /*上下中央揃え*/
+    position: relative;
+    justify-content: center;
+    align-items: center;     
+}
+.space {
+    padding: 0px 200px 0px 100px;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+.space p{
+    padding: 0px 200px 0px 100px;
+    position: relative;
+    justify-content: center;
+    align-items: center;     
 }
 p {
     font-family: 'メイリオ', 'Meiryo', sans-serif;
+    justify-content: center;
 }
