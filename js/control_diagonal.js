@@ -279,7 +279,7 @@ function question_np(phrase){
 }
 
 function utterance_spe(phrase){
-	self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/04_lean_sit_neck");
+	self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/01_lean_sit");
 	self.alTextToSpeech.say(phrase);
 }
 
