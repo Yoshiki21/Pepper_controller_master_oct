@@ -259,17 +259,17 @@ function aiduchi_np(num){
 function posture(num){
 	switch (num){
 		case 0:
-			self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/00_sit_down")
+			self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/05_sit_2")
 			break;
 		case 1:
-			self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/01_lean_sit");
+			self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/06_lean_sit_2");
 			break;	
 	}
 }
 function question(phrase){
 	// 手を動かして話始める
 	self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/02_back_voice");
-	self.alBehavior.runBehavior("yoshiki_master_oct/02_motion/01_start_talking_diagonal");
+	self.alBehavior.runBehavior("yoshiki_master_oct/02_motion/01_start_talking_diagonal_positive");
 	self.alTextToSpeech.say(phrase);
 }
 function question_np(phrase){
@@ -278,13 +278,20 @@ function question_np(phrase){
 	self.alTextToSpeech.say(phrase);
 }
 
+function question_np_move(phrase){
+	// 手を動かさず話し始める
+	self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/02_back_voice");
+	self.alBehavior.runBehavior("yoshiki_master_oct/02_motion/01_start_talking_diagonal_neutral");
+	self.alTextToSpeech.say(phrase);
+}
+
 function utterance_spe(phrase){
-	self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/01_lean_sit");
+	self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/06_lean_sit_2");
 	self.alTextToSpeech.say(phrase);
 }
 
 function utterance_spe2(phrase){
-	self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/01_lean_sit");
+	self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/06_lean_sit_2");
 	self.alTextToSpeech.say(phrase);
 }
 
@@ -320,9 +327,12 @@ function name_saying(num){
 			self.alTextToSpeech.say("そんな素敵な" +value+"さんだからこそ、そんな体験ができたんですね！");
 			break;
 		case 2:
-			self.alTextToSpeech.say("謙虚で、人に感謝を忘れないところが、" +value+"さんの良いところっですね！");
+			self.alTextToSpeech.say("謙虚なところが、" +value+"さんの良いところっですね！");
 			break;
 		case 3:
+			self.alTextToSpeech.say("人に感謝を忘れないところが、" +value+"さんの良いところっですね！");
+			break;
+		case 4:
 			self.alTextToSpeech.say("それでも頑張った" +value+"さんは素晴らしいと思います。");
 			break;
 	}
