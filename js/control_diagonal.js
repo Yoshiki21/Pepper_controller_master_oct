@@ -231,7 +231,7 @@ function aiduchi_np(num){
 	self.alAudioDevice.setOutputVolume(50);
 	switch (num){
 		case 0:
-			self.alBehavior.runBehavior("yoshiki_master_oct/02_motion/00_nodding_diagonal")
+			self.alBehavior.runBehavior("yoshiki_master_oct/03_aiduchi_np/00_un")
 			break;
 		case 1:
 			self.alBehavior.runBehavior("yoshiki_master_oct/03_aiduchi_np/01_naruhodo");
