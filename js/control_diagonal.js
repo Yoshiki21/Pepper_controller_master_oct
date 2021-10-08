@@ -336,7 +336,7 @@ function name_saying(num){
 			self.alTextToSpeech.say("人に感謝を忘れないところが、" +value+"さんの良いところっですね！");
 			break;
 		case 4:
-			self.alTextToSpeech.say("それでも頑張った" +value+"さんは素晴らしいと思います。");
+			self.alTextToSpeech.say("それでも頑張った" +value+"さんは素晴らしいと思います");
 			break;
 	}
 }
