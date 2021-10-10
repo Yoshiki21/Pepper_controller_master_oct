@@ -115,10 +115,21 @@ function say(){
 }
 
 // 名前を呼ぶ関数
-function say_name(){
-	console.log("say_name");
+function say_name(num){
 	var value = $("#name_input").val();
-	this.alTextToSpeech.say(value+"さんっ！");
+	switch(num){
+		case 0:
+			this.alTextToSpeech.say(value+"さんっ！");
+			break;
+		case 1:
+			this.alTextToSpeech.say(value+"さんの");
+			break;
+		case 2:
+			this.alTextToSpeech.say(value+"さんは");
+			break;
+	}
+	
+
 }
 
 // 動きながらおしゃべり
@@ -289,12 +300,12 @@ function question_np_move(phrase){
 }
 
 function utterance_spe(phrase){
-	self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/06_lean_sit_2");
+	self.alBehavior.runBehavior("yoshiki_master_oct/02_motion/09_moving_to_positive");
 	self.alTextToSpeech.say(phrase);
 }
 
 function utterance_spe2(phrase){
-	self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/06_lean_sit_2");
+	self.alBehavior.runBehavior("yoshiki_master_oct/02_motion/02_start_talking_diagonal_neutral");
 	self.alTextToSpeech.say(phrase);
 }
 
@@ -326,22 +337,27 @@ function autonomousSwitch(bl){
 function name_saying(num){
 	var value = $("#name_input").val();
 	self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/02_back_voice");
-	self.alBehavior.runBehavior("yoshiki_master_oct/02_motion/07_start_talking_positives");
+	if (num<5){
+		self.alBehavior.runBehavior("yoshiki_master_oct/02_motion/07_start_talking_positives");
+	}
 	switch(num){
 		case 1:
-			self.alTextToSpeech.say("そんな素敵な" +value+"さんだからこそ、そんな体験ができたんですね！");
+			self.alTextToSpeech.say("そんな素敵な" +value+"さんだからこそ、そんな体験ができたんですねッ！");
 			break;
 		case 2:
-			self.alTextToSpeech.say("謙虚なところが、" +value+"さんの良いところっですね！");
+			self.alTextToSpeech.say("謙虚なところが、" +value+"さんの良いところっですねッ！");
 			break;
 		case 3:
-			self.alTextToSpeech.say("人に感謝を忘れないところが、" +value+"さんの良いところっですね！");
+			self.alTextToSpeech.say("人に感謝を忘れないところが、" +value+"さんの良いところっですねッ！");
 			break;
 		case 4:
 			self.alTextToSpeech.say("それでも頑張った" +value+"さんは、素晴らしいと思います");
 			break;
 		case 5:
-			self.alTextToSpeech.say(value+"さんの生まれた頃のこと、気になります！！");
+			self.alTextToSpeech.say(value+"さんが生まれた頃のこと、気になりますッ！！");
+			break;
+		case 6:
+			self.alTextToSpeech.say("改めまして、"+value+"さん、僕の住む、大岡山へようこそ！");
 			break;
 	}
 }
