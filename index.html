@@ -4,7 +4,7 @@
     <title>QiMessaging (メモリを監視)</title>
     <script src="libs/qimessaging/1.0/qimessaging.js"></script>
     <script>
-      const unaduki = ["っんんっっんん","っっんん","っっんんっんん","へーーーー！！","ほーーーー！！","なるほどー","そうなんですね！！","なるほどーーそうなんですねぇ","っぁーーー","はいー","知らなかったです！！","じゃあ","っぁぁーーーー","あのぉー","っはぁーーーー","なるほどーー","もう少し質問しても良いですかー？","そーだったんーですねぇ---","っんー","ありがとうございます！！","ありがとうございます！","なるほどーーそうなんですね","酢ごくいいですね！！","んーーんーーーー","素敵ですね！！","そーだったんですねぇ---","なるほどーそうなんですねぇ","そうなんですね","そうですねぇぇ"]
+      const unaduki = ["っんんっっんん","っっんん","っっんんっんん","へーーーー！！","ほーーーー！！","なるほどー","そうなんですね！！","なるほどーーそうなんですねぇ","っぁーーー","はいー","知らなかったです！！","じゃあ","っぁーーーーッ","あのぉー","っはぁーーーー","なるほどーー","もう少し質問しても良いですかー？","そーだったんーですねぇ---","っんー","ありがとうございます！！","ありがとうございます！","なるほどーーそうなんですね","酢ごくいいですね！！","んーーんーーーー","素敵ですね！！","そーだったんですねぇ---","なるほどーそうなんですねぇ","そうなんですね","そうですねぇぇ"]
       function toTabletHandler(value) {
         var value = value.replace(/どういうふー/g,'どういうふう');
         var value = value.replace(/やろーと/g,'やろうと');
@@ -17,6 +17,8 @@
         var value = value.replace(/ーっ！/g,'');
         var value = value.replace(/っ！/g,'');
         var value = value.replace(/ぁ！！/g,'');
+        var value = value.replace(/お話ですね/g,'お話しですね');
+        var value = value.replace(/貴重なお話/g,'貴重なお話し');
         var value = value.replace(/\\pau=400\\/g,'');
         if (unaduki.indexOf(value) !==-1){
           document.getElementById("memory").innerHTML = "";
@@ -28,7 +30,7 @@
       }
 
       function startSubscribe() {
-        var session = new QiSession("169.254.159.144");
+        var session = new QiSession("192.168.100.25");
         console.log(session)
         session.service("ALMemory").done(function (ALMemory) {
           ALMemory.subscriber("ALTextToSpeech/CurrentSentence").done(function(subscriber) {

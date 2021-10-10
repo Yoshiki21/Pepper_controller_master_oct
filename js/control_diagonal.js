@@ -214,7 +214,7 @@ function aiduchi(num){
 			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi/09_sugokuiidesune");
 			break;
 		case 10:
-			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi/10_u___n");
+			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi/10_naruhodo_gaze_averstion");
 			break;
 		case 11:
 			self.alBehavior.runBehavior("yoshiki_master_oct/01_aiduchi/11_naruhodo_mousukoshi");
@@ -272,7 +272,7 @@ function posture(num){
 function question(phrase){
 	// 手を動かして話始める
 	self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/02_back_voice");
-	self.alBehavior.runBehavior("yoshiki_master_oct/02_motion/01_start_talking_diagonal_positive");
+	self.alBehavior.runBehavior("yoshiki_master_oct/02_motion/07_start_talking_positives");
 	self.alTextToSpeech.say(phrase);
 }
 function question_np(phrase){
@@ -284,7 +284,7 @@ function question_np(phrase){
 function question_np_move(phrase){
 	// 手を動かさず話し始める
 	self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/02_back_voice");
-	self.alBehavior.runBehavior("yoshiki_master_oct/02_motion/02_start_talking_diagonal_neutral");
+	self.alBehavior.runBehavior("yoshiki_master_oct/02_motion/08_start_talking_neutrals");
 	self.alTextToSpeech.say(phrase);
 }
 
@@ -325,6 +325,8 @@ function autonomousSwitch(bl){
 
 function name_saying(num){
 	var value = $("#name_input").val();
+	self.alBehavior.runBehavior("yoshiki_master_oct/00_posture/02_back_voice");
+	self.alBehavior.runBehavior("yoshiki_master_oct/02_motion/07_start_talking_positives");
 	switch(num){
 		case 1:
 			self.alTextToSpeech.say("そんな素敵な" +value+"さんだからこそ、そんな体験ができたんですね！");
@@ -336,7 +338,10 @@ function name_saying(num){
 			self.alTextToSpeech.say("人に感謝を忘れないところが、" +value+"さんの良いところっですね！");
 			break;
 		case 4:
-			self.alTextToSpeech.say("それでも頑張った" +value+"さんは素晴らしいと思います");
+			self.alTextToSpeech.say("それでも頑張った" +value+"さんは、素晴らしいと思います");
+			break;
+		case 5:
+			self.alTextToSpeech.say(value+"さんの生まれた頃のこと、気になります！！");
 			break;
 	}
 }
