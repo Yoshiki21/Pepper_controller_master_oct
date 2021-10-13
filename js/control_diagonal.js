@@ -354,10 +354,16 @@ function name_saying(num){
 			self.alTextToSpeech.say("それでも頑張った" +value+"さんは、素晴らしいと思います");
 			break;
 		case 5:
-			self.alTextToSpeech.say(value+"さんが生まれた頃のこと、気になりますッ！！");
+			self.alTextToSpeech.say(value+"さんの、ご兄弟や、ご家族についても、教えて下さい！");
 			break;
 		case 6:
 			self.alTextToSpeech.say("改めまして、"+value+"さん、僕の住む、大岡山へようこそ！");
+			break;
+		case 7:
+			self.alTextToSpeech.say(value+"さんの、最近あった、楽しかったことも、知りたいです！");
+			break;
+		case 8:
+			self.alTextToSpeech.say("僕は寒さが苦手だから、春になったら、"+value+"さんの、故郷に胃ってみたいなーッっ！");
 			break;
 	}
 }
