@@ -65,6 +65,8 @@ function connect(){
    	 			.done(function (tts)
    	 			{
    	 	        	tts.say("");
+					tts.setLanguage("Japanese")
+					tts.addToDictionary("名詞-一般","日本語","2000" , "ニホンゴ","3-4:*")
    	 	       });
    	 	       		// 接続成功したら各種セットアップを行う
      	       		setupIns_();
@@ -342,13 +344,13 @@ function name_saying(num){
 	}
 	switch(num){
 		case 1:
-			self.alTextToSpeech.say("そんな素敵な" +value+"さんだからこそ、そんな体験ができたんですねッ！");
+			self.alTextToSpeech.say("そんな素敵な" +value+"さんだからこそ、お話しいただいた、体験ができたんですねッ！");
 			break;
 		case 2:
-			self.alTextToSpeech.say("謙虚なところが、" +value+"さんの良いところっですねッ！");
+			self.alTextToSpeech.say("謙虚なとこ炉が！、" +value+"さんの良いとこ炉ですね！");
 			break;
 		case 3:
-			self.alTextToSpeech.say("人に感謝を忘れないところが、" +value+"さんの良いところっですねッ！");
+			self.alTextToSpeech.say("人に感謝を、忘れないとこ炉が！、" +value+"さんの良いとこ炉ですねッ！");
 			break;
 		case 4:
 			self.alTextToSpeech.say("それでも頑張った" +value+"さんは、素晴らしいと思います");
